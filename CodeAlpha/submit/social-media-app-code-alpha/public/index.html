@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Social Media App</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-content">
+            <h1 class="title">Mini Social Media App</h1>
+
+            <!-- Modal for messages -->
+            <div id="modal-overlay" class="modal-overlay hidden">
+                <div class="modal-content">
+                    <p id="modal-text" class="modal-text"></p>
+                </div>
+            </div>
+
+            <!-- Main Application Content (after login) -->
+            <div id="main-app" class="hidden">
+                <div class="logged-in-header">
+                    <p>Welcome, <span id="username-display"></span>!</p>
+                    <button id="logout-button" class="form-button small-button bg-red-500">Logout</button>
+                </div>
+                <div id="create-post-container" class="card">
+                    <h2 class="card-title">Create a new Post</h2>
+                    <form id="create-post-form">
+                        <textarea id="post-textarea" class="form-textarea" rows="4" placeholder="What's on your mind?" required></textarea>
+                        <button type="submit" class="form-button mt-4">Post</button>
+                    </form>
+                </div>
+                <div id="posts-container" class="post-feed">
+                    <!-- Posts will be rendered here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Login and Registration Forms -->
+            <div id="auth-forms">
+                <div id="login-form-container" class="card">
+                    <h2 class="card-title">Login to your account</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <input name="email" type="email" placeholder="Email" class="form-input" required />
+                        </div>
+                        <div class="form-group">
+                            <input name="password" type="password" placeholder="Password" class="form-input" required />
+                        </div>
+                        <button type="submit" class="form-button">Login</button>
+                    </form>
+                    <p class="text-center mt-4">
+                        Don't have an account? <a href="#" id="show-register" class="text-blue-500 hover:underline">Register here.</a>
+                    </p>
+                </div>
+
+                <div id="register-form-container" class="card hidden">
+                    <h2 class="card-title">Register a new user</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <input name="username" type="text" placeholder="Username" class="form-input" required />
+                        </div>
+                        <div class="form-group">
+                            <input name="email" type="email" placeholder="Email" class="form-input" required />
+                        </div>
+                        <div class="form-group">
+                            <input name="password" type="password" placeholder="Password" class="form-input" required />
+                        </div>
+                        <button type="submit" class="form-button">Register</button>
+                    </form>
+                    <p class="text-center mt-4">
+                        Already have an account? <a href="#" id="show-login" class="text-blue-500 hover:underline">Login here.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+    <script></script>
+</body>
+</html>
