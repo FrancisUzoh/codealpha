@@ -1,12 +1,1 @@
-Visual Studio temporary files
-.vs/
-
-Node.js dependencies
 node_modules/
-
-Log files
-*.log
-
-Environment variables
-.env
-.env.local
